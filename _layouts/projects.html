@@ -1,0 +1,47 @@
+---
+layout: full-width
+---
+
+{%- include paginated_posts.html -%}
+
+<div class="col-lg-12">
+ <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="row center">
+          <!-- Pagination links -->
+          {% if paginator.total_pages > 1 %}
+            <ul class="pagination pagination-sm">
+              {% if paginator.previous_page %}
+                <li class="pagination-link"><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo;</a></li>
+              {% else %}
+                <li class="pagination-link disabled"><span aria-hidden="true">&laquo;</span></li>
+              {% endif %}
+
+              <li class="pagination-link" ><a href="/work">First</a></li>
+
+              {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+             <li class="disabled pagination-link"><span><b>{{ page }}</b></span></li>
+                {% elsif page == 1 %}
+                  <li class="pagination-link"><a href="/work">{{ page }}</a></li>
+                {% else %}
+                  <li class="pagination-link"><a href="/work/page/{{ page }}">{{ page }}</a></li>
+                {% endif %}
+              {% endfor %}
+
+              <li class="pagination-link"><a href="/work/page/{{ paginator.total_pages }}/#/">Last</a></li>
+
+              {% if paginator.next_page %}
+                <li class="pagination-link"><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">&raquo;</a></li>
+              {% else %}
+                <li class="disabled pagination-link"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {% endif %}
+      </div>
+
+    </div>
+
+ </div>
+</div>

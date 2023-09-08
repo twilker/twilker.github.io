@@ -1,0 +1,88 @@
+<style>
+    /* change cover_img in config.yml */
+    .bg-primary {
+        background-color: #1351bd !important;
+    }
+
+    section {
+        color: white;
+    }
+
+    h2 {
+        color: inherit !important;
+    }
+
+    hr {
+        border-color: #1351bd;
+        border-width: 3px;
+        max-width: 50px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+    }
+
+    hr.light {
+        border-color: white;
+    }
+
+    .btn {
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        border: none;
+        border-radius: 300px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .btn-xl {
+        padding: 15px 30px;
+    }
+
+    .btn-default {
+        color: #222;
+        background-color: white;
+        border-color: white;
+        -webkit-transition: all 0.35s;
+        -moz-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+
+    .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle .btn-default {
+        color: #222;
+        background-color: #f2f2f2;
+        border-color: #ededed;
+    }
+
+    .btn-default:active, .btn-default.active, .open > .dropdown-toggle .btn-default {
+        background-image: none;
+    }
+
+    .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+        background-color: white;
+        border-color: white;
+    }
+
+    .btn-default .badge {
+        color: white;
+        background-color: #222;
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+      $("#callToActionHeading").typewrite({
+        actions: [{ type: "Between Bytes & Board Games" }]
+      });
+    });
+</script>
+
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading" id="callToActionHeading"></h2>
+                <hr class="light">
+                <p class="text-faded">Confession time: I revel in my nerd-hood. From fervently following Marvel to immersing in Anime, Manga, and board games that echo role-playing adventures, my passions run deep. Yet, my most profound devotion? Software development. <br/><br/>Initially charmed by Object-Oriented Programming during my electrical engineering days, I've spent a decade mastering C#. But stasis isn't my style. A hackathon introduced me to the wonders of Web 3.0 and the vast web stack, an event I not only learned from but also claimed victory. <br/><br/>My real superpowers? Lightning-fast problem-solving, relentless learning, and an insatiable drive to evolve. Balancing this code-crafting journey with the joys of fathering three, my mission remains: Relish every byte and beat of life.</p>
+                <a href="projects" class="btn btn-default btn-xl">Explore My Passion!</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-<div class="col-lg-12">
-<div class="row">
+<style>  
+  .main-row {
+    margin-top: 20px;
+  }
+</style>
+
+<div class="row main-row">
   <div class="col-lg-4">
     <div class="card" id="profile-card">
       <a href="/">
@@ -98,6 +103,14 @@ layout: default
 
       {%- include author_skills.html -%}
     </div>
+  </div>
+  <div class="col-lg-8">
+    {% if site.author_bio %}
+    <div class="card">
+      <h1 class="card-title">About</h1>
+      <p>{{ site.author_bio | newline_to_br }}</p>
+    </div>
+    {% endif %}
 
     {% if site.wakatime_username %}
     <div class="card">
@@ -106,14 +119,7 @@ layout: default
       {%- include coding_activity.html -%}
     </div>
     {% endif %}
-  </div>
-  <div class="col-lg-8">
-    {% if site.author_bio %}
-    <div class="card">
-      <h1 class="card-title">About</h1>
-      <p>{{ site.author_bio }}</p>
-    </div>
-    {% endif %} {% if site.show_author_project_details == true %}
+    {% if site.show_author_project_details == true %}
     <div id="author_projects" class="card">
       <h1 class="card-title">Projects</h1>
       <br />
@@ -186,5 +192,4 @@ layout: default
     </div>
     {% endif %}
   </div>
-</div>
 </div>

@@ -1,23 +1,21 @@
-title: devlopr
-subtitle: A Portfolio Jekyll Theme Built for Developers
+title: Tobias Wilker
+subtitle: Father of 3 | Passionate Developer | Web 3.0 Enthusiast
 description: >- # this means to ignore newlines until "baseurl:"
-  devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
+  From electrical engineering to a decade in C#, my journey led me to the marvels of Web 3.0, unlocking superpowers in full-stack and blockchain development.
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "https://twilker.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
 urls:
     - text: Home
       url: /
-    - text: About
+    - text: About Me
       url: /about
-    - text: Blog
-      url: /blog
-    - text: Gallery
-      url: /gallery
-    - text: Shop
-      url : /shop
+    - text: Work
+      url: /work
+    - text: Projects
+      url: /projects
     - text: Contact
       url : /contact
 
@@ -25,13 +23,27 @@ urls:
 # Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: profile.png
-author: John Doe
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
-author_email: "mail@sujaykundu.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
-hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+author: Tobias Wilker
+author_bio: |-
+  I have to make a confession. I am a nerd. And I love every second of it.  
+
+  I am a huge Marvel fan. I love everything Anime and Manga. In the little free time I have, I play board games that are the closest thing you can find to actual roleplaying games. But most of all I am a software developer.
+
+  Although it did not start that way. In the beginning I studied electrical engineering and there was only one module, one semester with one hour each week about OOP. But it was enough to get me hooked. After my studies I started as a software developer in C# where I honed my skills for 10 years.
+
+  But I never stopped learning.
+
+  Starting as hobby projects and later more professional as hackathons I fell in love with Web 3.0, which means full stack web development, including blockchain development. I literally learned the whole web stack during a hackathon which I miraculously even won in the end.
+
+  Remember that I am a Marvel fan? My superpowers are: Incredible speed of understanding problems, architecture, new programming languages, everything that interests me; an unstoppable drive to improve myself and learn new things.
+
+  My mission is to have fun and to enjoy every moment of my nerdy, chaotic (I do have three children) and adventurous life.
+
+author_email: "tobias.wilker@gmail.com"
+author_location: Germany
+author_website_url: "https://twilker.github.io"
+typewrite-text: let skillSet = ['C#', 'Full Stack', 'Web 3.0']; skillSet.forEach(skill => learn(skill));
+hero_cover_img: cover.jpeg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
 author_work_experiences:
@@ -71,16 +83,9 @@ author_project_details:
                 visibility: true
 
 # social links
-twitter_username: johndoe
-github_username:  sujaykundu777
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
-flickr_username: johndoe
+twitter_username: FoobaFun
+github_username:  twilker
+linkedin_username: tobiaswilker
 
 #for comments ( we got Disqus and Hyvor Commenting, uncomment the one you want to use )
 
@@ -88,14 +93,14 @@ flickr_username: johndoe
 hyvor_talk_website_id: 476
 
 # wakatime username (coding activity)
-wakatime_username: sujaykundu777
+#wakatime_username: sujaykundu777
 
 # mailchimp embedded form url (newsletter):
-mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
+# mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
 
 # contact form - (choose formspress or getform)
 # getform_endpoint: 83b703c3-9e47-4df4-ac55-e24d7eb02abc
-formspree_email: johndoe@gmail.com
+formspree_email: tobias.wilker@gmail.com
 
 # releases - widget can be (sidebar, modal or embed)
 olvy_organization: devlopr
@@ -107,14 +112,20 @@ highlighter: rouge
 permalink: pretty
 
 # Choose what to show ( can be true or false)
-show_author_work_experiences: true
-show_author_education_details: true
-show_author_project_details: true
+show_author_work_experiences: false
+show_author_education_details: false
+show_author_project_details: false
 
 # pagination of posts
-paginate: 4
-per_page: 4
-paginate_path: "/blog/page/:num/"
+#paginate: 4
+#per_page: 4
+#paginate_path: "/blog/page/:num/"
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  category: 'project'
 
 # minify
 # compress_html:
@@ -132,11 +143,11 @@ paginate_path: "/blog/page/:num/"
 #   permalinks:
 #     category: '/category/:name/'
 
-collections:
-  products:
-    output: true
-  authors:
-    output: true
+#collections:
+#  products:
+#    output: true
+#  authors:
+#    output: true
 
 defaults:
   -
@@ -159,7 +170,7 @@ defaults:
 
 # Build settings
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-gist
   - jekyll-seo-tag
   - jekyll-sitemap

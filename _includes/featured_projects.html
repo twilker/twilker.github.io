@@ -1,0 +1,226 @@
+<style>
+.flex-grid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 3.125rem;
+}
+
+.ribbon span {
+    font-size: .75rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #b31917;
+    position: absolute;
+    top: 19px;
+    right: -21px;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #005f97;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #005f97;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #005f97;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #005f97;
+}
+
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+}
+
+.box-item {
+    -ms-flex: 1 0 300px;
+    flex: 1 0 300px;
+    margin: 0 .938rem 3.125rem;
+    display: inline-block;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    min-height: 17.813rem;
+    transition: all .3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.box-item .box-body {
+    padding: 1.563rem;
+}
+
+.box-item .box-body time {
+    font-size: .875rem;
+    color: #b2bac2;
+}
+
+.box-item .box-body h2 {
+    margin: .313rem 0 .938rem;
+    font-size: 1.25rem;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #005f97 !important;
+}
+
+.box-item .box-body p {
+    margin: 0 0 1.25rem;
+    color: #576366;
+    font-size: .875rem;
+    line-height: 1.375rem;
+}
+
+.box-item .box-body .tags a {
+    color: #005f97;
+    padding: .313rem .625rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 0 .313rem;
+    z-index: 50;
+    border: 1px solid #005f97;
+}
+
+.box-item a {
+    text-decoration: none;
+}
+
+.post-CSharp .ribbon span:before {
+    border-left: 3px solid #6a1577;
+    border-top: 3px solid #6a1577;
+}
+
+.post-CSharp .ribbon span:after {
+    border-right: 3px solid #6a1577;
+    border-top: 3px solid #6a1577;
+}
+
+.post-CSharp .box-body .tags a {
+    color: #9a4993;
+    border: 1px solid #9a4993;
+}
+
+.post-CSharp .box-body h2 {
+    color: #9a4993 !important;
+}
+
+.post-CSharp .ribbon span {
+    background-color: #9a4993;
+}
+
+.post-Typescript .ribbon span:before {
+    border-left: 3px solid #005289;
+    border-top: 3px solid #005289;
+}
+
+.post-Typescript .ribbon span:after {
+    border-right: 3px solid #005289;
+    border-top: 3px solid #005289;
+}
+
+.post-Typescript .box-body .tags a {
+    color: #007acc;
+    border: 1px solid #007acc;
+}
+
+.post-Typescript .box-body h2 {
+    color: #007acc !important;
+}
+
+.post-Typescript .ribbon span {
+    background-color: #007acc;
+}
+
+.post-Python .ribbon span:before {
+    border-left: 3px solid #005289;
+    border-top: 3px solid #005289;
+}
+
+.post-Python .ribbon span:after {
+    border-right: 3px solid #005289;
+    border-top: 3px solid #005289;
+}
+
+.post-Python .box-body .tags a {
+    color: #ffd43b;
+    border: 1px solid #ffd43b;
+}
+
+.post-Python .box-body h2 {
+    color: #ffd43b !important;
+}
+
+.post-Python .ribbon span {
+    background-color: #ffd43b;
+}
+</style>
+
+<div id="grid" class="row flex-grid">
+    {% for post in site.posts %}
+        {% if post.featured %}
+            <article role="article" class="box-item post-{{ post.language }}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                    <span class="ribbon">
+                        <span>
+                            {% if post.language == 'CSharp' %}
+                                C#
+                            {% else %}
+                                {{ post.language }}
+                            {% endif %}
+                        </span>
+                    </span>
+                    <div class="box-body">
+                        <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
+                            <meta itemprop="datePublished" content="{{post.date}}">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">
+                                <span class="day">
+                                    {{ post.date | date: "%d" }}
+                                </span>
+                                <span class="month-year">
+                                    {{ post.date | date: "%B %Y" }}
+                                </span>
+                            </time>
+                        </a>
+                        <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
+                        <p class="description">
+                            {{ post.content | strip_html | truncatewords:40 }}
+                        </p>
+    
+                        <div class="tags">
+                            {% for tag in post.tags %}
+                                <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+            </article>
+        {% endif %}
+    {% endfor %}
+</div>
