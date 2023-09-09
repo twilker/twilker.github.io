@@ -4,6 +4,8 @@ WORKDIR /srv/jekyll
 
 ADD . /srv/jekyll
 
+ENV DEBUG_RESOLVER=1
+
 RUN gem install bundler && \
     rm -rf Gemfile.lock && \
     chmod -R 777 ${PWD} && \
