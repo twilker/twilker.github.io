@@ -43,6 +43,10 @@ jobs:
     needs: set-deploy-type
     if: needs.set-deploy-type.outputs.target == 'gh-pages'
 
+    permissions:
+      contents: write
+      pages: write
+
     steps:
     - uses: actions/checkout@v4
 
