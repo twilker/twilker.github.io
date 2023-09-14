@@ -32,6 +32,10 @@ jobs:
       - name: Build the site in the jekyll/builder container
         run: |
           docker run $(docker build -q -f jekyll.Dockerfile .)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
 
   # Then check the markdown files are properly formatted
   analyse:
