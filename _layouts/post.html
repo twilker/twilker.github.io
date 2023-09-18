@@ -2,9 +2,57 @@
 layout: default
 ---
 
-<div class="row justify-content-center" id="blog-post-container">
-  <div class="col-lg-10">
+<div class="row justify-content-center post-{{ page.language }}" id="blog-post-container">
+  <div class="col-lg-8">
     {%- include blog_post_article.html -%}
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <h1 class="card-title">Data</h1>
+      <div class="card-body">
+          {% if page.homepage %}
+          <div class="mb-4">
+              <strong>Homepage:</strong> <a href="{{ page.homepage }}" target="_blank">{{ page.homepage }}</a>
+          </div>
+          {% endif %}
+
+          {% if page.repository %}
+          <div class="mb-4">
+              <strong>Repository:</strong> <a href="{{ page.repository }}" target="_blank">{{ page.repository }}</a>
+          </div>
+          {% endif %}
+
+          {% if page.languages %}
+          <div class="mb-4">
+              <strong>Languages:</strong>
+              <ul class="list-group mt-3">
+                  {% assign languages = page.languages | split: ", " %}
+                  {% for language in languages %}
+                  <li class="list-group-item">{{ language }}</li>
+                  {% endfor %}
+              </ul>
+          </div>
+          {% endif %}
+
+          {% if page.technologies %}
+          <div class="mb-4">
+              <strong>Technologies:</strong>
+              <ul class="list-group mt-3">
+                  {% assign technologies = page.technologies | split: ", " %}
+                  {% for technology in technologies %}
+                  <li class="list-group-item">{{ technology }}</li>
+                  {% endfor %}
+              </ul>
+          </div>
+          {% endif %}
+
+          {% if page.timeinvestment %}
+          <div class="mb-4">
+              <strong>Time Investment:</strong> {{ page.timeinvestment }}
+          </div>
+          {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 <div class="row justify-content-center">
