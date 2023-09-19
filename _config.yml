@@ -45,43 +45,6 @@ author_website_url: "https://twilker.github.io"
 typewrite-text: let skillSet = ['C#', 'Full Stack', 'Web 3.0']; skillSet.forEach(skill => learn(skill));
 hero_cover_img: cover.jpeg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
-# Experiences
-author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
-              visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
-              visibility: true
-
-# Education
-author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
-                visibility: true
-
-# Projects
-author_project_details:
-              - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
-                project_url: https://gamershub.in
-                visibility: true
-              - project_thumbnail: hack4r.PNG
-                project_title: Hack4r
-                project_description: A Platform built for Hackers and Penetration Testers
-                project_url: https://hack4r.com
-                visibility: true
-
 # social links
 twitter_username: FoobaFun
 github_username:  twilker
@@ -143,25 +106,7 @@ pagination:
 #   permalinks:
 #     category: '/category/:name/'
 
-#collections:
-#  products:
-#    output: true
-#  authors:
-#    output: true
-
 defaults:
-  -
-    scope:
-      path: "gallery"
-    values:
-      permalink: /:path/:basename:output_ext
-  -
-    scope:
-      path: ""
-      type: authors
-    values:
-      layout: author
-      permalink: /blog/authors/:slug
   -
     scope:
       path: 'assets/**'
