@@ -1,5 +1,18 @@
 /* devlopr-jekyll styling */
 
+.call-to-action-divider {
+    border: 0; /* Removes default line */
+    height: 1px; /* Thickness of the line */
+    background: linear-gradient(to right, transparent, var(--light-border-color), transparent); /* Fade effect */
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Center the line */
+}
+
+.call-to-action p {
+    font-size: 1.2rem !important;
+}
+
 /* language themes */
 .flex-grid {
     display: -ms-flexbox;
