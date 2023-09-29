@@ -8,7 +8,7 @@ category: work
 thumbnail: /assets/img/posts/logicplus/logic+.png
 screenshots: 
 video: https://www.youtube.com/embed/_bdMDCusUw0?si=4pI7ekUtAh1YoNpL
-permalink: /projects/graphical-editor/
+permalink: /work/graphical-editor/
 language: CSharp
 homepage: https://www.phoenixcontact.com/en-us/products/programming-plcnext-engineer-1046008
 languages: C#

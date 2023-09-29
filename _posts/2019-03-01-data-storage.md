@@ -6,7 +6,7 @@ author: twilker
 date: '2019-03-01 14:35:23 +0530'
 category: work
 thumbnail: /assets/img/posts/datastorage/data_storage.jpeg
-permalink: /projects/data-storage-pcwx/
+permalink: /work/data-storage-pcwx/
 language: CSharp
 homepage: https://www.phoenixcontact.com/en-us/products/programming-plcnext-engineer-1046008
 languages: C#
