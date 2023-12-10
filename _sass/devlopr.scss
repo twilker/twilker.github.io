@@ -243,6 +243,37 @@
     color: #ffd43b !important;
 }
 
+.post-Rust .ribbon span:before {
+    border-left: 3px solid #912c00;
+    border-top: 3px solid #912c00;
+}
+
+.post-Rust .ribbon span:after {
+    border-right: 3px solid #912c00;
+    border-top: 3px solid #912c00;
+}
+
+.post-Rust .box-body .tags a {
+    color: #f74b00;
+    border: 1px solid #f74b00;
+}
+
+.post-Rust .box-body h2 {
+    color: #f74b00 !important;
+}
+
+.post-Rust .ribbon span {
+    background-color: #f74b00;
+}
+
+.post-Rust .post-title {
+    color: #f74b00 !important;
+}
+
+.post-Rust .card-title {
+    color: #f74b00 !important;
+}
+
 /* variables */
 $body-typeface:'Quicksand', sans-serif;
 $nav-typeface: "Gill sans";
