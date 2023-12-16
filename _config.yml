@@ -12,6 +12,8 @@ urls:
       url: /
     - text: About Me
       url: /about
+    - text: What I Offer
+      url: /offer
     - text: Work
       url: /work
     - text: Projects
