@@ -43,7 +43,7 @@ author_bio: |-
 
 author_email: "tobias.wilker@gmail.com"
 author_location: Germany
-author_website_url: "https://twilker.github.io"
+author_website_url: "https://marvelsofcode.com/"
 typewrite-text: let skillSet = ['C#', 'Full Stack', 'Web 3.0']; skillSet.forEach(skill => learn(skill));
 hero_cover_img: cover.jpeg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
