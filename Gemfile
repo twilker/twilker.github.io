@@ -15,7 +15,7 @@ gem 'puma'
 # Plugins
 group :jekyll_plugins do
     # gem 'devlopr', '~> 0.4.5'
-    gem 'jgd', '~> 1.12'
+    gem 'jgd', '~> 1.14'
     gem 'jekyll-feed', '~> 0.17.0'
     gem 'jekyll-paginate-v2', '~> 3.0.0'
     gem 'jekyll-gist', '~> 1.5.0'
