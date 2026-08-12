@@ -3,7 +3,7 @@ subtitle: Father of 3 | Passionate Developer | Web 3.0 Enthusiast
 description: >- # this means to ignore newlines until "baseurl:"
   From electrical engineering to a decade in C#, my journey led me to the marvels of Web 3.0, unlocking superpowers in full-stack and blockchain development.
 
-url: "https://twilker.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "https://marvelsofcode.com" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
